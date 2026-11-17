@@ -1,0 +1,14 @@
+{
+  "name": "curiozando-viagem-no-tempo",
+  "private": true,
+  "type": "module",
+  "description": "Animação 2D sobre cenários 3D (three.js) renderizada quadro a quadro com Playwright",
+  "scripts": {
+    "quadros": "node render.mjs stills quadros 1 12 22 36",
+    "video": "node render.mjs video frames 24 && ffmpeg -y -framerate 24 -i frames/f_%04d.png -c:v libx264 -pix_fmt yuv420p -crf 21 -movflags +faststart previa.mp4"
+  },
+  "dependencies": {
+    "three": "0.160.0",
+    "playwright": "^1.47.0"
+  }
+}

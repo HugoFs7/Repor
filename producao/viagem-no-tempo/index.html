@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;background:#111;}
+  #stage{position:relative;width:720px;height:1280px;overflow:hidden;font-family:Inter,sans-serif;}
+  #gl{position:absolute;left:0;top:0;width:720px;height:1280px;}
+  #fx,#hud{position:absolute;left:0;top:0;width:720px;height:1280px;}
+  #dots{position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(40,25,70,.55) 0.9px, transparent 1.5px);
+    background-size:5px 5px;mix-blend-mode:multiply;opacity:.28;}
+  #grain{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(30,15,50,.28) 100%);}
+</style></head>
+<body>
+<div id="stage">
+  <canvas id="gl" width="720" height="1280"></canvas>
+  <svg id="fx" viewBox="0 0 720 1280" xmlns="http://www.w3.org/2000/svg"></svg>
+  <div id="dots"></div>
+  <div id="grain"></div>
+  <svg id="hud" viewBox="0 0 720 1280" xmlns="http://www.w3.org/2000/svg"></svg>
+</div>
+<script type="module" src="./app.js"></script>
+</body></html>
